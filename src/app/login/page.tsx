@@ -43,9 +43,9 @@ const LoginPage = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-black ">
-      <h1>{loading ? "Processing" : "Login"}</h1>
+      <h1 className="text-white">{loading ? "Processing" : "Login"}</h1>
       <hr />
-      <label htmlFor="email">email</label>
+      <label htmlFor="email" className="text-white">Email</label>
       <input 
           // className="p-2  border border-gray-300 rounded=lg mb-4 focus:outline-none focus:border-gray-600" 
           className=" bg-white border rounded-lg px-4 py-2 focus:outline-none focus:border-gray-600"
@@ -55,7 +55,7 @@ const LoginPage = () => {
           onChange={(e)=> setUser({...user, email: e.target.value})} 
           placeholder="email" 
       />
-      <label htmlFor="password">password</label>
+      <label htmlFor="password" className="text-white">password</label>
       <input 
           className="p-2  border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600  bg-white" 
           // className=" bg-white border rounded px-4 py-2 focus:outline-none focus:border-gray-600"
