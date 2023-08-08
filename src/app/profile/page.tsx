@@ -19,13 +19,15 @@ const ProfilePage = () => {
       toast.error(error.message)
     }
   }
+
   const getUserDetails = async() =>{
     const res = await axios.get('/api/users/me');
     console.log(res.data);
     setData(res.data.data._id)
-    
   }
+
   return (
+
     <div className="flex flex-col items-center justify-center min-h-screen  text-white">
         <h1>Profile</h1>
         <hr />
@@ -39,7 +41,6 @@ const ProfilePage = () => {
         <button
           onClick={getUserDetails} 
           className='bg-green-800 hover:bg-blue-700 mt-4 text-white font-bold py-2 px-4 rounded'> Get User details</button>
- 
     </div>
   )
 }

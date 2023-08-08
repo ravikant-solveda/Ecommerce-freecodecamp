@@ -1,4 +1,4 @@
-import { getDateFromToken } from "@/helpers/getDataFromToken";
+import { getDataFromToken } from "@/helpers/getDataFromToken";
 
 import { NextRequest, NextResponse } from "next/server";
 import User from "@/models/userModel";
@@ -8,7 +8,7 @@ connect()
 
 export async function GET(request: NextRequest){
     try {
-        const userId = await getDateFromToken(request);
+        const userId = await getDataFromToken(request);
         const user = await User.findOne({_id: userId}).select("-password"); // password field will not be fetched
         return NextResponse.json({
             message: "User found",

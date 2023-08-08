@@ -13,7 +13,6 @@ export function middleware(request: NextRequest) {
     if(!isPublicPath && !token){
         return NextResponse.redirect(new URL('/login', request.nextUrl))
     }
-    
 }
  
 // See "Matching Paths" below to learn more
@@ -21,7 +20,7 @@ export const config = {
 //   matcher: '/about/:path*',
   matcher: [
     '/',
-    '/profile',
+    '/profile/:path*',
     '/login',
     '/signup',
   ],
