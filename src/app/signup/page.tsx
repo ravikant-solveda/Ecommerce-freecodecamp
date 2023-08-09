@@ -20,10 +20,10 @@ const SignupPage = () => {
   const onSignup = async ()=>{
       try {
         setLoding(true);
-        
+        router.push("/login")
         const response = await axios.post('api/users/signup', user);
         // console.log("signup success", response.data);
-        router.push("/login")
+       
       } catch (error:any) {
         console.log("Signup failed", error.message);
         toast.error(error.message)

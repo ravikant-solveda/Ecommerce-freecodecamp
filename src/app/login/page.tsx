@@ -68,7 +68,7 @@ const LoginPage = () => {
       <button 
          onClick={onLogin}
          className="p-2  border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600  bg-white" 
-         >  Signup here
+         >  Login here
       </button>
       <Link 
         href={'/signup'}
